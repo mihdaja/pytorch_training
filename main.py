@@ -137,6 +137,6 @@ def compute_accuracy(model, dataloader):
 
 torch.save(model.state_dict(), "model.pth") # save the model's weights and biases to the model.pth file
 model2 = NeuralNetwork(2, 2)
-model2 .load_state_dict(torch.load("model.pth", weights_only=True))
+model2 .load_state_dict(torch.load("model.pth", weights_only=True)) # load the model 
 
-print(compute_accuracy(model2, train_loader))
+print(compute_accuracy(model2, train_loader)) # checking the new model we just copied
